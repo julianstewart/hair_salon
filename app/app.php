@@ -12,9 +12,18 @@
     $app->get("/", function() {
         $output = "";
 
-        foreach ($list_of_tasks as $task) {
+        foreach (Task::getAll() as $task) {
             $output = $output . "<p>" . $task->getDescription() . "</p>";
         }
+
+        $output = $output . "
+            <form action='/tasks' method='post'>
+                <label for='description'>Task Description</label>
+                <input id='description' name='description' type='text'>
+
+                <button type='submit'>Add task</button>
+            </form>
+        ";
 
         return $output;
     });
