@@ -20,12 +20,20 @@ class Task
 
     function save()
     {
-        array_push($_SESSION['list_of_tasks'], $this);
+        $GLOBALS['DB']->exec("INSERT INTO tasks (description) VALUES ('{$this->getDescription()}');");
     }
 
     static function getAll()
     {
-        return $_SESSION['list_of_tasks'];
+        $returned_tasks = $GLOBALS['DB']->query("SELECT * FROM tasks;");
+        $tasks = array();
+        foreach($returned_tasks as $task) {
+            $description = $task['description'];
+            $id = $task['id'];
+            $new_task = new Task($description, $id);
+            array_push($tasks, $new_task);
+        }
+        return $tasks;
     }
 
     static function deleteAll()
