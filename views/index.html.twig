@@ -16,10 +16,10 @@
 
         {% if categories is not empty %}
             <p>Here are all your categories:</p>
-            <<ul>
+            <ul>
                 {% for category in categories %}
-                    <<li><a href="/categories/{{ category.getId }}">{{ category.getName }}</a></li>
-                {% elsefor %}
+                    <li><a href="/categories/{{ category.getId }}">{{ category.getName }}</a></li>
+                {% endfor %}
             </ul>
         {% else %}
             <p>There are no categories yet!</p>
@@ -27,7 +27,6 @@
 
         <!-- <p><a href="/categories">Click here</a> to see of the categories and to add a category.</p>
         <p><a href="/tasks">Click here</a> to see all of the tasks and to add a task.</p> -->
-
 
     </body>
 </html>
