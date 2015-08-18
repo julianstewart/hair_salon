@@ -31,6 +31,21 @@
             $this->id= $GLOBALS['DB']->lastInsertId();
         }
 
+        function getTasks()
+        {
+            $tasks = Array();
+            $returned_tasks = $GLOBALS['DB']->query("SELECT * FROM tasks WHERE category_id = {$this->getId()}");
+            foreach($returned_tasks as $task) {
+                $description = $task['description'];
+                $id = $task['id'];
+                $category_id = $task['category_id'];
+                $new_Task = new Task($description, $id, $category_id);
+                array_push($tasks, $new_Task);
+            }
+            return $tasks;
+        }
+
+
         static function getAll()
         {
             $returned_categories = $GLOBALS['DB']->query("SELECT * FROM categories;");

@@ -18,6 +18,7 @@
       protected function tearDown()
       {
           Task::deleteAll();
+          Category::deleteAll();
       }
 
 
@@ -42,8 +43,7 @@
       //Assert
       $result = Task::getAll();
       $this->assertEquals($test_task, $result[0]);
-
-        }
+      }
 
     function test_getAll()
     {
@@ -90,7 +90,7 @@
         //Act
         Task::deleteAll();
 
-        //Asser
+        //Assert
         $result = Task::getAll();
         $this->assertEquals([], $result);
     }
@@ -147,17 +147,17 @@
         $description = "Wash the dog";
         $category_id = $test_category->getId();
         $test_task = new Task($description, $id, $category_id);
-        $test_Task->save();
+        $test_task->save();
 
         $description2 = "Water the lawn";
-        $test_Task2 = new Task($description2, $id, $category_id);
-        $test_Task2->save();
+        $test_task2 = new Task($description2, $id, $category_id);
+        $test_task2->save();
 
         //Act
         $result = Task::find($test_task->getId());
 
         //Assert
-        $this->assertEquals($test_Task, $result);
+        $this->assertEquals($test_task, $result);
     }
 
   }
