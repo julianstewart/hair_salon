@@ -35,7 +35,7 @@
         $task = new Task($description, $id = null, $category_id);
         $task->save();
         $category = Category::find($category_id);
-        return $app['twig']->render('category.html.twig', array('category' => $category, 'tasks'=> $category->getTasks()));
+        return $app['twig']->render('category.html.twig', array('category' => $category, 'tasks'=> Task::getAll()));
     });
 
     $app->post("/delete_tasks", function() use ($app) {
