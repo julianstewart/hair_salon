@@ -26,9 +26,9 @@
 
     $app->get("/categories/{id}", function($id) use ($app) {
         $category = Category::find($id);
-        return $app['twig']->render('category.html.twig', array('category' => $category, 'tasks' => Category::getTasks()));
+        return $app['twig']->render('category.html.twig', array('category' => $category, 'tasks' =>$category->getTasks()));
     });
- 
+
     $app->post("/tasks", function() use ($app) {
         $description = $_POST['description'];
         $category_id = $_POST['category_id'];
