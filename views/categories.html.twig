@@ -6,12 +6,12 @@
         <h1>Categories</h1>
 
         {% if categories is not empty %}
-            <p>Here are all your categories:</p>
-            <ul>
+            <p>Here are some categories:</p>
+            <!-- <ul> -->
                 {% for category in categories %}
-                    <li>{{ category.getName }}</li>
+                    <a href="/categories/{{ category.getId }}"> {{ category.getName }}</a>
                 {% endfor %}
-            </ul>
+            <!-- </ul> -->
         {% endif %}
 
         <form action='/categories' method='post'>
