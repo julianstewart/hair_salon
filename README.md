@@ -1,12 +1,18 @@
 # _Hair Salon_
 
-##### _An application that allows salon owners to more effectively manage their stylists and clients, August 21st, 2015_
+##### _An application that allows hair salon owners to more effectively manage their stylist and client lists, August 21st, 2015_
 
 #### By _**Julian Stewart**_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}_
+_This application, through a simple web interface, allows hair salon owners to:_
+* _Create a list of the stylists working at that salon_
+* _Assign a list of clients to each stylist_
+
+## Limitations
+
+_The current version of this application does not allow the user to associate multiple stylists with a specific client or clients._
 
 ## Setup
 
@@ -20,13 +26,11 @@ _{Leave nothing to chance! You want it to be easy for potential employers and co
 
 ## Technologies Used
 
-_{Tell me about the languages you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_PHP, MySQL_
 
 ### Legal
 
-*{This is boilerplate legal language. Read through it, and if you like it, use it. There are other license agreements online, but you can generally copy and paste this.}*
-
-Copyright (c) 2015 **_{List of contribtors}_**
+Copyright (c) 2015 **_Julian Stewart_**
 
 This software is licensed under the MIT license.
 
