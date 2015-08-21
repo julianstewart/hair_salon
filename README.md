@@ -1,8 +1,8 @@
-# _{To Do List}_
+# _Hair Salon_
 
-##### _{An application that allows the user to add items to a to do list and to completely clear the list if desired}, {August 5th, 2015}_
+##### _An application that allows salon owners to more effectively manage their stylists and clients, August 21st, 2015_
 
-#### By _**{Brian Borealis and Julian Stewart}**_
+#### By _**Julian Stewart**_
 
 ## Description
 
