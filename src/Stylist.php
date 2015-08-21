@@ -1,23 +1,23 @@
 <?php
     class Stylist
     {
-        private $name;
-        private $id;
+        private $stylist_name;
+        private $stylist_id;
 
-        function __construct($name, $id = null)
+        function __construct($stylist_name, $stylist_id = null)
         {
-            $this->name = $name;
-            $this->id = $id;
+            $this->stylist_name = $stylist_name;
+            $this->stylist_id = $stylist_id;
         }
 
-        function setName ($new_name)
+        function setStylistName ($new_stylist_name)
         {
-            $this->name = (string) $new_name;
+            $this->stylist_name = (string) $new_stylist_name;
         }
 
-        function getName()
+        function getStylistName()
         {
-            return $this->name;
+            return $this->stylist_name;
         }
 
         function getId()
