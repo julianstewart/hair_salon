@@ -1,6 +1,6 @@
 # _Hair Salon_
 
-##### _An application that allows hair salon owners to more effectively manage their stylist and client lists, August 21st, 2015_
+##### _An application that allows hair salon owners to more effectively manage their stylist and client lists, 2015.08.21_
 
 #### By _**Julian Stewart**_
 
@@ -16,17 +16,24 @@ _The current version of this application does not allow the user to associate mu
 
 ## Setup
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+_This project makes use of a PHP dependency manager. Full details and installation instructions can be found at <a href="https://getcomposer.org">getcomposer.org</a>._
 
-_{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}_
+_Your computer must also be set up to support PDO (PHP Data Objects) and MySQL. There are a variety of free tools available to configure your computer, including MAMP (MacOS) and LAMP (Windows), as well as ample documentation online._
+
+_To run the application:_
+
+* _Start your local PHP server from the web/ directory within the project folder_
+* _Start your MySQL server, and run the following commands:_
+<pre>
+CREATE DATABASE hair_salon;
+CREATE TABLE stylists (stylist_id serial PRIMARY KEY, stylist_name varchar (255));
+CREATE TABLE clients (client_id serial PRIMARY KEY, client_name varchar (255));
+</pre>
+* _Point your browser to your localhost server_
 
 ## Technologies Used
 
-_PHP, MySQL_
+_PHP, MySQL, Silex, Twig_
 
 ### Legal
 
