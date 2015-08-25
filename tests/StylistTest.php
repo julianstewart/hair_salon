@@ -7,7 +7,7 @@
 
     require_once "src/Stylist.php";
 
-    $server = 'mysql:host=localhost;port:8889;mysql:unix_socket=/Applications/MAMP/tmp/mysql/mysql.sock;dbname=hair_salon_test';
+    $server = 'mysql:host=localhost:8889;dbname=hair_salon_test';
     $username = 'root';
     $password = 'root';
     $DB = new PDO($server, $username, $password);
@@ -33,7 +33,7 @@
             //Arrange
             $stylist_name = "John Doe";
             $id = 1;
-            $test_Category = new Category($stylist_name, $stylist_id);
+            $test_Category = new Stylist($stylist_name, $stylist_id);
 
             //Act
             $result = $test_Stylist->getStylistId();
